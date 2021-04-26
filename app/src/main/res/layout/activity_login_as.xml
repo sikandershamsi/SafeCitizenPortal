@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/plainbackground"
+    tools:context=".LoginAs">
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/myswitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:thumb="@drawable/thumb"
+        app:track="@drawable/track"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        >
+    </androidx.appcompat.widget.SwitchCompat>
+    <TextView
+        android:id="@+id/switchtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:text="Switch User"
+        android:fontFamily="monospace"
+        android:textColor="#A70012"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp">
+
+    </TextView>
+
+
+    <ImageView
+        android:id="@+id/logothis"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/logo"
+        android:layout_below="@+id/switchtext"
+        android:layout_centerHorizontal="true"
+        >
+
+    </ImageView>
+
+
+
+    <TextView
+        android:id="@+id/loginpolicetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logothis"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
+        android:text="LOGIN AS POLICE OFFICER"
+        android:textColor="#A70012"
+        android:textSize="20dp"
+        android:visibility="gone"
+        android:textStyle="bold">
+
+    </TextView>
+    <TextView
+        android:id="@+id/logincitizentext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logothis"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="monospace"
+        android:text="LOGIN AS CITIZEN"
+        android:textColor="#A70012"
+        android:textSize="20dp"
+        android:visibility="gone"
+        android:textStyle="bold">
+
+    </TextView>
+    <TextView
+        android:id="@+id/enteryournumtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Please enter your Number"
+        android:layout_marginTop="20dp"
+        android:textSize="25dp"
+        android:visibility="gone"
+        android:layout_below="@+id/logincitizentext"
+        android:layout_centerHorizontal="true"
+        >
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:background="@drawable/fieldbg"
+        android:layout_below="@+id/loginpolicetext"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:hint="Email"
+        android:visibility="gone"
+        android:inputType="textEmailAddress"
+        android:paddingStart="15dp"
+        android:paddingLeft="15dp">
+
+    </EditText>
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:background="@drawable/fieldbg"
+        android:layout_below="@+id/email"
+        android:layout_centerHorizontal="true"
+        android:hint="Password"
+        android:visibility="gone"
+        android:maxLength="6"
+        android:inputType="textPassword"
+        android:paddingStart="15dp"
+        android:paddingLeft="15dp">
+
+    </EditText>
+    <EditText
+        android:id="@+id/phonenum"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:background="@drawable/fieldbg"
+        android:layout_below="@+id/enteryournumtext"
+        android:layout_centerHorizontal="true"
+        android:hint="Enter your Number"
+        android:inputType="number"
+        android:paddingStart="15dp"
+        android:visibility="gone"
+        android:maxLength="11"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="15dp">
+
+    </EditText>
+    <TextView
+        android:id="@+id/forgotpassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password ?"
+        android:layout_below="@+id/password"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="65dp"
+        android:visibility="gone"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="70dp">
+
+    </TextView>
+    
+
+
+    <Button
+        android:id="@+id/btnloginpolice"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/buttonbg"
+        android:layout_below="@+id/forgotpassword"
+        android:text="LOGIN"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp">
+
+    </Button>
+
+
+
+    <Button
+        android:id="@+id/btnlogincitizen"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/buttonbg"
+        android:layout_below="@+id/phonenum"
+        android:text="LOGIN"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp">
+
+    </Button>
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        >
+
+    </ProgressBar>
+
+
+
+
+
+
+</RelativeLayout>
